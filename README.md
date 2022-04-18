@@ -12,10 +12,10 @@ Precisa de consultoria em qualidade de software? Contate o autor do material atr
 </div>
 
 - [Aprenda Test Driven Development na prática](#aprenda-tdd-na-pratica)
-    - [Sobre o tutorial](#Sobre-o-tutorial)
-    - [Pré-requisitos](#pre-requisitos)
-    - [Um pouco sobre testes - Nivelando conhecimento](#Um-pouco-sobre-testes-Nivelando-conhecimento)
-      - [O que é teste de software?](#O-que-é-teste-de-software)
+    - [Sobre o tutorial](#sobre-o-tutorial)
+    - [Pré-requisitos](#pré-requisitos)
+    - [Um pouco sobre testes - Nivelando conhecimento](#um-pouco-sobre-testes-nivelando-conhecimento)
+      - [O que é teste de software?](#o-que-é-teste-de-software)
       - [Nunca criei testes automatizados, como é um teste unitário?](#nunca-criei-testes-automatizados-como-é-um-teste-unitário)
       - [O que é TDD?](#o-que-é-tdd)
       - [O que TDD não é:](#o-que-tdd-não-é)
