@@ -95,6 +95,7 @@ Essa imagem com o ciclo de TDD pode te ajudar a fixar o que viu acima:
 - Livro "[Effective Software Testing](https://www.manning.com/books/effective-software-testing)", do [Maurício Aniche](https://www.mauricioaniche.com/).
 - Vídeo "[How to Write Clean, Testable Code](https://www.youtube.com/watch?v=XcT4yYu_TTs)", do canal [Google TechTalks](https://www.youtube.com/channel/UCtXKDgv1AVoG88PLl8nGXmw).
 - Livro "[Test Driven Development: By Example](https://www.amazon.com.br/Test-Driven-Development-Kent-Beck/dp/0321146530)", do [Kent Beck](https://www.kentbeck.com/).
+- Texto "[Is TDD Dead?](https://martinfowler.com/articles/is-tdd-dead/)", do [Martin Fowler](https://martinfowler.com/).
 - Texto "[When I follow TDD](https://kentcdodds.com/blog/when-i-follow-tdd)", do [Kent C. Dodds](https://kentcdodds.com/).
 - Playlist de vídeos "[Let's Play: Test Driven Development](https://youtube.com/playlist?list=PL0CCC6BD6AFF097B1)", do [James Shore](https://www.jamesshore.com/).
 <!-- - Practical Full-Stack JavaScript Web Application Test Driven Development - https://github.com/nelsonic/practical-js-tdd -->
