@@ -5,7 +5,9 @@
 Uma breve introdução a **T**est **D**riven **D**evelopment (**TDD**)
 em JavaScript para pessoas que querem escrever _**códigos mais confiáveis**_
 
-**_Deixe uma star ⭐ no repositório e deixa um follow no [meu perfil](https://github.com/PauloGoncalvesBH), isso me incentiva a criar conteúdo de qualidade de software 100% gratuito_**
+**_Deixe uma star ⭐ no repositório e um follow no [meu perfil](https://github.com/PauloGoncalvesBH), isso me incentiva a criar conteúdo de qualidade de software 100% gratuito_**
+
+Precisa de consultoria em qualidade de software? Contate o autor do material através do e-mail <consultoria@paulog.dev>.
 
 </div>
 
@@ -54,7 +56,9 @@ Em uma tradução livre:
 
 Ao ler sobre TDD é comum ver a expressão "***Red, Green, Refactor***" (vermelho, verde e refatorar) como na seguinte imagem:
 
-![TDD Cycle: Red, Green, Refactor](./images/tdd-cycle.png)
+<p align="center">
+ <img alt="Ciclo do TDD: Red, Green, Refactor" src="./images/tdd-cycle.png">
+</p>
 
 Isso significa que o TDD é um processo que consiste das seguintes 3 etapas:
 
@@ -77,7 +81,9 @@ Escrever um teste que falha antes de escrever o código parece contraintuitivo, 
 
 Essa imagem com o ciclo de TDD pode te ajudar a fixar o que viu acima:
 
-![TDD Cycle](./images/tdd-cycle-2.jpg)
+<p align="center">
+ <img alt="Ciclo do TDD: Red, Green, Refactor" src="./images/tdd-cycle-2.jpg">
+</p>
 
 ### O que TDD não é:
 
@@ -517,7 +523,7 @@ Nós podemos continuar trapaceando escrevendo uma série de condicionais `if`:
 
 É, sem dúvida, mais trabalhoso trapacear do que resolvermos o problema de vez. Então vamos resolvê-lo.
 
-## Faça você mesmo (_antes de olhar para a solução_!)
+### Faça você mesmo
 
 > Tente criar o seu próprio método `calcularTroco` que passa os 3 testes antes de olhar a solução final.
 
@@ -601,7 +607,11 @@ PARABÉNS :partying_face:, você acabou de implementar o **refactor** do TDD, pa
 
 Você foi longe :smiley:, estou orgulhoso de você.
 
-_**Parabéns! Você acabou de fazer o seu primeiro Test Driven Development (TDD)!!**_
+**Parabéns! Você acabou de fazer o seu primeiro Test Driven Development (TDD)!!**
+
+<p align="center">
+ <img alt="Dança de Um maluco no pedaço" src="https://media.giphy.com/media/cklPOHnHepdwBLRnQp/giphy.gif">
+</p>
 
 <br><br><br><br>
 
