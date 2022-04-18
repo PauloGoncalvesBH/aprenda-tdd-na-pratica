@@ -58,11 +58,11 @@ Ao ler sobre TDD é comum ver a expressão "***Red, Green, Refactor***" (vermelh
 
 Isso significa que o TDD é um processo que consiste das seguintes 3 etapas:
 
-1. **Escreva um teste que falhe**: Entenda os requisitos/história bem o suficiente para escrever um teste para o que você espera que seja implementado. Como o teste testa um código que ainda não existe é esperado que ele falhe inicialmente, por isso o vermelho (**red**).
+1. :red_square: **Escreva um teste que falhe**: Entenda os requisitos/história bem o suficiente para escrever um teste para o que você espera que seja implementado. Como o teste testa um código que ainda não existe é esperado que ele falhe inicialmente, por isso o vermelho (**red**).
 
-1. **Faça o teste que está falhando passar**: Escreva somente (**SOMENTE**) o código da sua aplicação que é necessário para que o teste que está falhando comece a passar, enquanto garante que os testes anteriores (se possuir) continuem passando. Essa etapa é aonde todos os testes resultam em sucesso, por isso o verde do TDD (**green**).
+1. :green_square: **Faça o teste que está falhando passar**: Escreva somente (**SOMENTE**) o código da sua aplicação que é necessário para que o teste que está falhando comece a passar, enquanto garante que os testes anteriores (se possuir) continuem passando. Essa etapa é aonde todos os testes resultam em sucesso, por isso o verde do TDD (**green**).
 
-1. **Refatore o código que você escreveu**: Agora que o código necessário foi escrito e os testes estão passando é o momento para reservar um tempo para refatorar o código, eliminando más práticas e simplificando-o no que for possível, garantindo que esteja manutenível para os que forem mexer no código depois de você. Essa é a etapa de refatoração (**refactor**).
+1. :blue_square: **Refatore o código que você escreveu**: Agora que o código necessário foi escrito e os testes estão passando é o momento para reservar um tempo para refatorar o código, eliminando más práticas e simplificando-o no que for possível, garantindo que esteja manutenível para os que forem mexer no código depois de você. Essa é a etapa de refatoração (**refactor**).
 
 1. **Repita o processo**: Agora que possui um código estruturado, limpo e com teste cobrindo os cenários, siga em frente. Vai implementar mais algum código? Repita as etapas ***red, green, refactor***, senão siga a vida e liga o pay-per-view do BBB.
 
@@ -350,6 +350,10 @@ De volta ao browser, atualize a página e veja o teste falhar:
 > **Pergunta:** Porque deliberadamente escrever um teste que sabemos que irá falhar? <br>
 > **Resposta:** Para acostumarmos com a ideia de **somente** escrever o código necessário para fazer o teste passar e os requisitos serem cumpridos. <br>
 
+:red_square::red_square::red_square:
+
+PARABÉNS :partying_face:, você acabou de implementar o **red** do TDD, parte 1 de 3 do TDD finalizada.
+
 #### Crie a função `calcularTroco`
 
 No seu arquivo `index.html` adicione as seguintes linhas no `<script></script>` que está acima dos testes:
@@ -563,7 +567,41 @@ Então precisamos criar um teste em que iremos pagar R$ 200,00 para um item que 
       })
 ```
 
-Se todos os testes passarem, o seu trabalho está finalizado. :partying_face: :partying_face: Parabéns.
+Se todos os testes passarem, o seu trabalho está finalizado.
+
+:green_square::green_square::green_square:
+
+PARABÉNS :partying_face:, você acabou de implementar o **green** do TDD, parte 2 de 3 do TDD finalizada.
+
+#### Refatorando o `calcularTroco`
+
+Agora é a parte final do nosso material.
+
+> **Relembrando o que fizemos até agora:** Primeiro escrevemos um teste que falhava (**red**), depois implementamos um código que fez os testes passarem sem trapaça (**green**), e agora chegamos à etapa final, o **refactor** do TDD.
+
+Lembra quando eu disse que o TDD não é sobre testes, mas sobre design de código e em criar um código testável?
+
+Nesse ponto temos o nosso código testável, mas e sobre o seu design, será que nos preocupamos com isso o suficiente?
+
+**Agora é com você novamente**, identifique se o código que você implementou em `calcularTroco` está com as melhores práticas da linguagem, se não possui trechos desnecessários (importante criar apenas o código necessário) e se há nada que possa ser feito para melhorar a sua manutenibilidade (o seu eu do futuro e os colegas de trabalho agradecem).
+
+> Apenas continue a leitura desse documento após refatorar o seu código e entender que não há mais o que fazer no mesmo.
+
+Refatorou? Então se você viu isso no browser:
+
+<p align="center">
+ <img alt="Todos os 4 testes passando" src="./images/showing-all-passing-tests.png" height="600">
+</p>
+
+E também refatorou o seu código, mantendo os testes passando...
+
+:blue_square::blue_square::blue_square:
+
+PARABÉNS :partying_face:, você acabou de implementar o **refactor** do TDD, parte 3 de 3 do TDD finalizada.
+
+Você foi longe :smiley:, estou orgulhoso de você.
+
+_**Parabéns! Você acabou de fazer o seu primeiro Test Driven Development (TDD)!!**_
 
 <br><br><br><br>
 
@@ -590,16 +628,6 @@ Abaixo está exemplificada uma das formas de implementar o `calcularTroco` de mo
         return troco
       }
 ```
-
-Se você viu isso no browser:
-
-<p align="center">
- <img alt="Todos os 4 testes passando" src="./images/showing-all-passing-tests.png" height="600">
-</p>
-
-E também refatorou o seu código, mantendo os testes passando...
-
-_**Parabéns! Você acabou de fazer o seu primeiro Test Driven Development (TDD)!!**_
 
 ---
 
