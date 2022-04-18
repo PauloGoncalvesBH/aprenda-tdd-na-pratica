@@ -387,7 +387,7 @@ De volta ao browser, atualize a página e veja o teste falhar:
 
 PARABÉNS :partying_face:, você acabou de implementar o **red** do TDD, parte 1 de 3 do TDD finalizada.
 
-### Crie a função calcularTroco
+### Crie a função `calcularTroco`
 
 No seu arquivo `index.html` adicione as seguintes linhas no `<script></script>` que está acima dos testes:
 
