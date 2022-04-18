@@ -213,7 +213,7 @@ Chegamos na seção aonde escreveremos a solução da pergunta que queremos resp
     </script>
 ```
 
-Finalmente nós vemos os testes, essa é a parte interessante do arquivo (teste é sempre interessante, não concorda? <3):
+Finalmente nós vemos os testes, essa é a parte interessante do arquivo (teste é sempre interessante, não concorda? :heart_on_fire:):
 
 ```html
     <script>
@@ -236,6 +236,8 @@ Finalmente nós vemos os testes, essa é a parte interessante do arquivo (teste 
 
 > Os testes estão rodando no browser com [QUnit](https://qunitjs.com/) para que você utilize apenas o editor de código e o browser, sem preocupar com nenhum `docker run`, `npm install`, `pip install`, etc. Apenas crie o `index.html`, realize as tarefas comigo preenchendo o arquivo e aprenda TDD no processo.
 
+Agora que fizemos o setup do projeto e entendemos o que faz cada trecho, vamos conhecer o projeto que iremos implementar juntos utilizando TDD.
+
 ## Requisitos
 
 Como um cliente eu quero comprar um item na **máquina de vendas automática** e ver quanto de troco vou receber como **resultado** da compra entre as **cédulas disponíveis**, então eu posso selecionar um item e receber o meu troco.
@@ -251,20 +253,20 @@ Critérios de aceitação:
 - Testes unitários devem existir quando a função for finalizada.
 <!-- - The selection of the desired return is out of scope -->
 
-##### Visualização complementar da User Story
+### Visualização complementar da User Story
 
 > Dado um **preço do produto** e uma quantidade de **valor pago** pelo cliente
 > Retorno: **Troco** que o usuário deve receber (entre as cédulas disponíveis)
 
-### Entendendo o que é preciso
+### Entendendo o que vamos implementar
 
-- Crie uma função chamada `calcularTroco` que aceita 2 parâmetros:
+- Crie uma função chamada `calcularTroco` que aceita os seguintes 2 parâmetros:
     - `precoDoProduto`
     - `valorPago`
 - Para um dado `precoDoProduto` (o valor total que um item custa na máquina de vendas) e `valorPago` (o dinheiro que o cliente inseriu na máquina de vendas para pagar pelo item), a função `calcularTroco` deve calcular o troco que a máquina deve retornar para o cliente.
 - A função `calcularTroco` deve retornar o troco como um _array_ de cédulas (do maior valor ao menor) que a máquina de vendas automática precisa entregar ao cliente.
 
-#### _Exemplo_
+#### Exemplo
 
 Se o cliente comprar um item que custa R$ 2,00 (`precoDoProduto`) e pagar com cédula de R$ 10,00 (`valorPago`), a máquina deve devolver de troco R$ 8,00.
 
@@ -286,9 +288,6 @@ Que podem ser armazenadas em um array da seguinte forma:
 const cedulasDisponiveis = [100, 50, 20, 10, 5, 2, 1]
 ```
 
-In **T**est **F**irst **D**evelopment (TFD) we write a test *first* and *then*
-write the code that makes the test pass.
-
 #### Implementando o primeiro requisito
 
 > Relembrando: No **TDD** primeiro escrevemos o teste e depois escrevemos o código que faz o teste passar.
@@ -302,6 +301,8 @@ De volta ao arquivo `index.html`, substitua os testes existentes (apagando o que
         assert.deepEqual(trocoCalculado, trocoEsperado) // 'deepEqual' usado para comparar arrays, veja mais em https://api.qunitjs.com/assert/deepEqual/
       })
 ```
+
+O teste acima espera que nenhum troco seja retornado (`trocoEsperado = []`) se o cliente pagar o produto que custa R$ 1,00 com uma cédula de R$ 1,00.
 
 Nesse ponto o seu arquivo `index.html` deve ser semelhante a isso:
 
@@ -436,6 +437,8 @@ Adicione o seguinte teste na seção de testes do `index.html`:
       })
 ```
 
+O teste acima espera que seja retornado como troco o array `[50, 20, 10, 5]` (soma resulta em R$ 85,00) ao pagar um produto que custa R$ 215,00 com R$ 300,00.
+
 #### Implemente a função para o teste passar
 
 E se trapacearmos e fazermos o `calcularTroco` retornar o resultado esperado?
@@ -448,11 +451,11 @@ E se trapacearmos e fazermos o `calcularTroco` retornar o resultado esperado?
       }
 ```
 
-Issi irá fazer o novo teste passar (:partying_face:), mas também irá introduzir uma regressão. O teste original `calcularTroco(1,1) deve retornar [] - Um array vazio (1, 0, 1)` agora está falhando.
+Isso irá fazer o novo teste passar (:partying_face:), mas também irá introduzir uma regressão. O teste original `calcularTroco(1,1) deve retornar [] - Um array vazio (1, 0, 1)` agora está falhando.
 
-O passo 2 do **TDD** (o _green_) requer que TODOS os testes devem passar, e não apenas o teste novo.
+O passo 2 do **TDD** (o _green_) requer que **TODOS** os testes passem, e não apenas o teste novo.
 
-A função `calcularTroco` precisa atender a 2 cenários de testes, que são quando um troco deve ser retornado e quando não deve ser. Uma nova implementação de `calcularTroco` que lida com ambos os cenários é a seguinte:
+A função `calcularTroco` precisa atender a 2 cenários de testes, que são quando um troco deve ser retornado e quando não deve ser. Uma implementação de `calcularTroco` que lida com ambos os cenários é a seguinte:
 
 ```js
       function calcularTroco(precoDoProduto, valorPago) {
@@ -466,13 +469,11 @@ A função `calcularTroco` precisa atender a 2 cenários de testes, que são qua
       }
 ```
 
-A regressão foi corrigida e todos os testes estão passando, mas você fixou o resultado, o que não é muito útil para uma calculadora.
+A regressão foi corrigida e todos os testes estão passando, mas você fixou o valor do resultado, o que não é muito útil para uma calculadora.
 
 Isso irá funcionar apenas 1 vez. Quando escrevermos o próximo teste será preciso reescrever o método para satisfazer esse novo cenário.
 
 Vamos tentar então, temos o seguinte cenário:
-
-<!-- Let's try it.  Work out what you expect so you can write your test: -->
 
 ```js
 precoDoProduto = 486           // R$ 486,00
@@ -512,9 +513,9 @@ Nós podemos continuar trapaceando escrevendo uma série de condicionais `if`:
 
 É, sem dúvida, mais trabalhoso trapacear do que resolvermos o problema de vez. Então vamos resolvê-lo.
 
-# Experimente você mesmo (_antes de olhar para a solução_!)
+## Faça você mesmo (_antes de olhar para a solução_!)
 
-> Tente criar o seu próprio método `calcularTroco` que passa ,os 3 testes antes de olhar a solução final.
+> Tente criar o seu próprio método `calcularTroco` que passa os 3 testes antes de olhar a solução final.
 
 Recapitulando, esses são os nossos 3 testes:
 
@@ -538,7 +539,7 @@ Recapitulando, esses são os nossos 3 testes:
       })
 ```
 
-Agora foque no `index.html` e altere o `calcularTroco` para passar nos 3 testes sem nenhuma forma de trapaça (xô compilado de `ifs`). Volte aqui quando acreditar que o cálculo de troco está funcionando corretamente nos cenários propostos.
+Agora é com você, faça uma pausa na leitura, foque no `index.html` e altere o `calcularTroco` para passar nos 3 testes sem nenhuma forma de trapaça (xô compilado de `ifs`). Volte aqui quando acreditar que o cálculo de troco está funcionando corretamente nos cenários propostos.
 
 Finalizou? Vamos seguir então.
 
@@ -568,6 +569,8 @@ Se todos os testes passarem, o seu trabalho está finalizado. :partying_face: :p
 
 ## Solução
 
+Abaixo está exemplificada uma das formas de implementar o `calcularTroco` de modo que passe com sucesso em todos os 4 cenários de testes implementados nesse teste e em quaisquer outros.
+
 **Nota:** Sinta-se à vontade para sugerir uma solução mais compacta.
 
 ```js
@@ -594,7 +597,9 @@ Se você viu isso no browser:
  <img alt="Todos os 4 testes passando" src="./images/showing-all-passing-tests.png" height="600">
 </p>
 
-_**Parabéns! Você pode fazer Test Driven Development (TDD)!!**_
+E também refatorou o seu código, mantendo os testes passando...
+
+_**Parabéns! Você acabou de fazer o seu primeiro Test Driven Development (TDD)!!**_
 
 ---
 
