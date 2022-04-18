@@ -39,6 +39,7 @@ Precisa de consultoria em qualidade de software? Contate o autor do material atr
       - [Vamos inserir mais um teste para ter certeza que funciona?](#vamos-inserir-mais-um-teste-para-ter-certeza-que-funciona)
       - [Refatorando o `calcularTroco`](#refatorando-o-calcularTroco)
     - [Solução](#solução)
+
 ## Sobre o tutorial
 
 Esse tutorial irá te ajudar a dar os primeiros passos com **T**est **D**riven **D**evelopment (**TDD**) durante os próximos 30 minutos.
