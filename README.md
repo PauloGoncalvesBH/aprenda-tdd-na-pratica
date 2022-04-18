@@ -11,6 +11,35 @@ Precisa de consultoria em qualidade de software? Contate o autor do material atr
 
 </div>
 
+## Navegação no repositório
+
+- [Aprenda Test Driven Development na prática](#aprenda-tdd-na-pratica)
+    - [Sobre o tutorial](#sobre-o-tutorial)
+    - [Pré-requisitos](#pré-requisitos)
+    - [Um pouco sobre testes - Nivelando conhecimento](#um-pouco-sobre-testes-nivelando-conhecimento)
+      - [O que é teste de software?](#o-que-é-teste-de-software)
+      - [Nunca criei testes automatizados, como é um teste unitário?](#nunca-criei-testes-automatizados-como-é-um-teste-unitário)
+      - [O que é TDD?](#o-que-é-tdd)
+      - [O que TDD não é:](#o-que-tdd-não-é)
+      - [Recomendações de materiais para aprofundar em TDD](#recomendações-de-materiais-para-aprofundar-em-tdd)
+    - [É hora da prática](#é-hora-da-prática)
+      - [Projeto: Calculadora de troco de uma máquina de venda](#projeto-calculadora-de-troco-de-uma-máquina-de-venda)
+        - [Iniciando o "projeto"](#iniciando-o-projeto)
+      - [Requisitos](#requisitos)
+      - [Visualização complementar da User Story](#visualização-complementar-da-user-story)
+    - [Entendendo o que vamos implementar](#entendendo-o-que-vamos-implementar)
+      - [Exemplo](#exemplo)
+        - [Cédulas](#cédulas)
+    - [Implementando o primeiro requisito](#implementando-o-primeiro-requisito)
+      - [Veja o teste falhar](#veja-o-teste-falhar)
+      - [Crie a função `calcularTroco`](#crie-a-função-calcularTroco)
+      - [Implemente a função para o teste passar](#implemente-a-função-para-o-teste-passar)
+    - [Devemos continuar trapaceando ou resolver o problema?](#devemos-continuar-trapaceando-ou-resolver-o-problema)
+    - [Faça você mesmo](#faça-você-mesmo)
+      - [Vamos inserir mais um teste para ter certeza que funciona?](#vamos-inserir-mais-um-teste-para-ter-certeza-que-funciona)
+      - [Refatorando o `calcularTroco`](#refatorando-o-calcularTroco)
+    - [Solução](#solução)
+
 ## Sobre o tutorial
 
 Esse tutorial irá te ajudar a dar os primeiros passos com **T**est **D**riven **D**evelopment (**TDD**) durante os próximos 30 minutos.
@@ -21,24 +50,24 @@ Como os exemplos apresentados nesse material são pequenos, acredito que você n
 
 > Para mais exemplos sugiro a playlist "[Let's Play: Test Driven Development](https://youtube.com/playlist?list=PL0CCC6BD6AFF097B1)", aonde James Shore utiliza o TDD em um projeto real, resultando em 200 vídeos de pura prática do TDD.
 
-### Pré-requisitos
+## Pré-requisitos
 
 - 30 minutos.
 - Conhecimentos básicos em HTML e JavaScript.
 
-### Um pouco sobre testes - Nivelando conhecimento
+## Um pouco sobre testes - Nivelando conhecimento
 
 Antes de entrar no âmbito do TDD, precisamos garantir que temos o conhecimento em 2 coisas:
 
-#### O que é teste de software?
+### O que é teste de software?
 
 > O teste de software é o processo de avaliação de um item de software para detectar diferenças entre a saída esperada e a saída real. O teste avalia a qualidade do produto. O teste de software é um processo que deve ser feito durante o processo de desenvolvimento. Em outras palavras, o teste de software é um processo de verificação e validação.
 
-#### Nunca criei testes automatizados, como é um teste unitário?
+### Nunca criei testes automatizados, como é um teste unitário?
 
 Essa explicação deixo a cargo do [Gabriel Henrique](https://www.linkedin.com/in/gabrielh-silvestre/) em seu didático texto "[Introdução a Testes no Back-end](https://dev.to/gabrielhsilvestre/introducao-a-testes-no-back-end-4la8)".
 
-## O que é TDD?
+### O que é TDD?
 
 A primeira coisa que você precisa entender é que escrever código seguindo o TDD é uma abordagem diferente de simplesmente ir e resolver o problema (sem teste).
 
@@ -89,7 +118,7 @@ Essa imagem com o ciclo de TDD pode te ajudar a fixar o que viu acima:
 
 **T**este **D**epois do **D**eploy, isso é uma piada.
 
-### Recomendações de materiais para aprofundar em TDD
+## Recomendações de materiais para aprofundar em TDD
 
 - Newsletter "[Effective Software Testing](https://effectivesoftwaretesting.substack.com/)", mantida pelo [Maurício Aniche](https://www.mauricioaniche.com/).
 - Livro "[Effective Software Testing](https://www.manning.com/books/effective-software-testing)", do [Maurício Aniche](https://www.mauricioaniche.com/).
@@ -114,7 +143,7 @@ Essa imagem com o ciclo de TDD pode te ajudar a fixar o que viu acima:
 
 Imagine que você está construindo uma **máquina de vendas automática** que permite que as pessoas comprem qualquer item que ele contenha. A máquina aceita moedas e calcula o troco para ser devolvido ao cliente, dado o item **preço** e o **dinheiro** recebido.
 
-### Iniciando o "projeto"
+#### Iniciando o "projeto"
 
 Nós vamos construir o "projeto" inteiro em um arquivo único: `index.html`
 
@@ -245,7 +274,7 @@ Finalmente nós vemos os testes, essa é a parte interessante do arquivo (teste 
 
 Agora que fizemos o setup do projeto e entendemos o que faz cada trecho, vamos conhecer o projeto que iremos implementar juntos utilizando TDD.
 
-## Requisitos
+### Requisitos
 
 Como um cliente eu quero comprar um item na **máquina de vendas automática** e ver quanto de troco vou receber como **resultado** da compra entre as **cédulas disponíveis**, então eu posso selecionar um item e receber o meu troco.
 
@@ -265,7 +294,7 @@ Critérios de aceitação:
 > Dado um **preço do produto** e uma quantidade de **valor pago** pelo cliente
 > Retorno: **Troco** que o usuário deve receber (entre as cédulas disponíveis)
 
-### Entendendo o que vamos implementar
+## Entendendo o que vamos implementar
 
 - Crie uma função chamada `calcularTroco` que aceita os seguintes 2 parâmetros:
     - `precoDoProduto`
@@ -273,7 +302,7 @@ Critérios de aceitação:
 - Para um dado `precoDoProduto` (o valor total que um item custa na máquina de vendas) e `valorPago` (o dinheiro que o cliente inseriu na máquina de vendas para pagar pelo item), a função `calcularTroco` deve calcular o troco que a máquina deve retornar para o cliente.
 - A função `calcularTroco` deve retornar o troco como um _array_ de cédulas (do maior valor ao menor) que a máquina de vendas automática precisa entregar ao cliente.
 
-#### Exemplo
+### Exemplo
 
 Se o cliente comprar um item que custa R$ 2,00 (`precoDoProduto`) e pagar com cédula de R$ 10,00 (`valorPago`), a máquina deve devolver de troco R$ 8,00.
 
@@ -295,7 +324,7 @@ Que podem ser armazenadas em um array da seguinte forma:
 const cedulasDisponiveis = [100, 50, 20, 10, 5, 2, 1]
 ```
 
-#### Implementando o primeiro requisito
+## Implementando o primeiro requisito
 
 > Relembrando: No **TDD** primeiro escrevemos o teste e depois escrevemos o código que faz o teste passar.
 
@@ -346,7 +375,7 @@ Nesse ponto o seu arquivo `index.html` deve ser semelhante a isso:
 </html>
 ```
 
-#### Veja o teste falhar
+### Veja o teste falhar
 
 De volta ao browser, atualize a página e veja o teste falhar:
 
@@ -361,7 +390,7 @@ De volta ao browser, atualize a página e veja o teste falhar:
 
 PARABÉNS :partying_face:, você acabou de implementar o **red** do TDD, parte 1 de 3 do TDD finalizada.
 
-#### Crie a função `calcularTroco`
+### Crie a função `calcularTroco`
 
 No seu arquivo `index.html` adicione as seguintes linhas no `<script></script>` que está acima dos testes:
 
@@ -417,7 +446,7 @@ O seu `index.html` deve ser semelhante a isso:
 ```
 
 
-#### Atualize o `index.html` no browser
+### Atualize o `index.html` no browser
 
 <p align="center">
  <img alt="Primeiro teste passando" src="./images/first-test-passes.png" height="600">
@@ -450,7 +479,7 @@ Adicione o seguinte teste na seção de testes do `index.html`:
 
 O teste acima espera que seja retornado como troco o array `[50, 20, 10, 5]` (soma resulta em R$ 85,00) ao pagar um produto que custa R$ 215,00 com R$ 300,00.
 
-#### Implemente a função para o teste passar
+### Implemente a função para o teste passar
 
 E se trapacearmos e fazermos o `calcularTroco` retornar o resultado esperado?
 
@@ -502,7 +531,7 @@ Adicione o seguinte teste ao `index.html` e atualize o seu browser:
         assert.deepEqual(trocoCalculado, trocoEsperado)
       })
 ```
-#### Devemos continuar trapaceando ou resolver o problema?
+## Devemos continuar trapaceando ou resolver o problema?
 
 Nós podemos continuar trapaceando escrevendo uma série de condicionais `if`:
 
@@ -524,7 +553,7 @@ Nós podemos continuar trapaceando escrevendo uma série de condicionais `if`:
 
 É, sem dúvida, mais trabalhoso trapacear do que resolvermos o problema de vez. Então vamos resolvê-lo.
 
-### Faça você mesmo
+## Faça você mesmo
 
 > Tente criar o seu próprio método `calcularTroco` que passa os 3 testes antes de olhar a solução final.
 
@@ -554,7 +583,7 @@ Agora é com você, faça uma pausa na leitura, foque no `index.html` e altere o
 
 Finalizou? Vamos seguir então.
 
-#### Vamos inserir mais um teste para ter certeza que funciona?
+### Vamos inserir mais um teste para ter certeza que funciona?
 
 Vamos criar um teste que irá returnar uma de cada cédula. Relembrando que temos 7 tipos de cédulas:
 
@@ -580,7 +609,7 @@ Se todos os testes passarem, o seu trabalho está finalizado.
 
 PARABÉNS :partying_face:, você acabou de implementar o **green** do TDD, parte 2 de 3 do TDD finalizada.
 
-#### Refatorando o `calcularTroco`
+### Refatorando o `calcularTroco`
 
 Agora é a parte final do nosso material.
 
@@ -616,7 +645,7 @@ Você foi longe :smiley:, estou orgulhoso de você.
 
 <br><br><br><br>
 
-## Solução
+### Solução
 
 Abaixo está exemplificada uma das formas de implementar o `calcularTroco` de modo que passe com sucesso em todos os 4 cenários de testes implementados nesse teste e em quaisquer outros.
 
