@@ -11,6 +11,16 @@ Precisa de consultoria em qualidade de software? Contate o autor do material atr
 
 </div>
 
+## Sobre o tutorial
+
+Esse tutorial irá te ajudar a dar os primeiros passos com **T**est **D**riven **D**evelopment (**TDD**) durante os próximos 30 minutos.
+
+Como os exemplos apresentados nesse material são pequenos, acredito que você não irá ter a percepção de todas as vantagens que o TDD fornece, necessitando de problemas mais complexos e que possuem uma solução que demandam mais tempo para resolver.
+
+**É difícil demonstrar os benefícios do TDD em um repositório**, o que pretendo apresentar para você nesse material é o ciclo do TDD, fazendo com que você crie o seu primeiro teste antes da codificação da aplicação e entenda que TDD não é sobre testes, mas sobre design de código e criar um código testável.
+
+> Para mais exemplos sugiro a playlist "[Let's Play: Test Driven Development](https://youtube.com/playlist?list=PL0CCC6BD6AFF097B1)", aonde James Shore utiliza o TDD em um projeto real, resultando em 200 vídeos de pura prática do TDD.
+
 ## Navegação no repositório
 
 - [Aprenda Test Driven Development na prática](#aprenda-tdd-na-pratica)
@@ -39,16 +49,6 @@ Precisa de consultoria em qualidade de software? Contate o autor do material atr
       - [Vamos inserir mais um teste para ter certeza que funciona?](#vamos-inserir-mais-um-teste-para-ter-certeza-que-funciona)
       - [Refatorando o `calcularTroco`](#refatorando-o-calcularTroco)
     - [Solução](#solução)
-
-## Sobre o tutorial
-
-Esse tutorial irá te ajudar a dar os primeiros passos com **T**est **D**riven **D**evelopment (**TDD**) durante os próximos 30 minutos.
-
-Como os exemplos apresentados nesse material são pequenos, acredito que você não irá ter a percepção de todas as vantagens que o TDD fornece, necessitando de problemas mais complexos e que possuem uma solução que demandam mais tempo para resolver.
-
-**É difícil demonstrar os benefícios do TDD em um repositório**, o que pretendo apresentar para você nesse material é o ciclo do TDD, fazendo com que você crie o seu primeiro teste antes da codificação da aplicação e entenda que TDD não é sobre testes, mas sobre design de código e criar um código testável.
-
-> Para mais exemplos sugiro a playlist "[Let's Play: Test Driven Development](https://youtube.com/playlist?list=PL0CCC6BD6AFF097B1)", aonde James Shore utiliza o TDD em um projeto real, resultando em 200 vídeos de pura prática do TDD.
 
 ## Pré-requisitos
 
