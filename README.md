@@ -7,8 +7,6 @@ em JavaScript para pessoas que querem escrever _**códigos mais confiáveis**_
 
 **_Deixe uma star ⭐ no repositório e um follow no [meu perfil](https://github.com/PauloGoncalvesBH), isso me incentiva a criar conteúdo de qualidade de software 100% gratuito_**
 
-Precisa de consultoria em qualidade de software? Contate o autor do material através do e-mail <consultoria@paulog.dev> e veja os feedbacks de consultorias anteriores na minha [página de serviços do Linkedin](https://www.linkedin.com/services/page/62827230a62a7a3813/).
-
 </div>
 
 ## Sobre o tutorial
